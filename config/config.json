@@ -8,7 +8,9 @@
     "dialect": "postgres"
   },
   "production": {
-    "database": "peerpal_backend_production",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": true
+    }
   }
 }
