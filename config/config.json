@@ -8,10 +8,12 @@
     "dialect": "postgres"
   },
   "production": {
-    "use_env_variable": "DATABASE_URL",
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": true
-    }
+    "client":"pg",
+    "connection": "process.env.DATABASE_URL + `?ssl=true`",
+    "migrations": {
+      "directory": "./migrations"
+    },
+    "useNullAsDefault": true
   }
+  
 }
