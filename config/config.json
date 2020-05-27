@@ -8,6 +8,7 @@
     "dialect": "postgres"
   },
   "production": {
+    "database": "peerpal_backend_prod",
     "client":"pg",
     "dialect": "postgres",
     "use_env_variable": "DATABASE_URL",
