@@ -1,6 +1,6 @@
 {
   "development": {
-    "database": "peerpal_backend_development",
+    "database": "peerpal_backend",
     "dialect": "postgres"
   },
   "test": {
@@ -8,6 +8,7 @@
     "dialect": "postgres"
   },
   "production": {
+    "use_env_variable": "DATABASE_URL",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": true
