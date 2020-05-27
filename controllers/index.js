@@ -82,6 +82,7 @@ const getAllUsers = async (req,res) => {
 }
 
 const getAllTodos = async (req, res) => {
+	console.log('here')
 	try {
 		const todos = await Todo.findAll()
 		return res.status(200).json({ todos })
