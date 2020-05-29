@@ -8,9 +8,11 @@
     "dialect": "postgres"
   },
   "production": {
-    "database": "peerpal_backend_prod",
+    "use_env_variable": "DATABASE_URL",
     "dialect": "postgres",
-    "use_env_variable": "DATABASE_URL"
+    "dialectOptions": {
+      "ssl": true
+    }
   }
   
 }
