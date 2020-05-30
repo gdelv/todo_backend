@@ -106,6 +106,18 @@ const getTodoById = async (req, res) => {
 	}
 }
 
+const getUserTodos = async (req, res) => {
+	try {
+		const { id } = req.params
+		const todos = await Todo.findAll({
+			where: { userId: id }
+		})
+		return res.status(200).json({ todos })
+	} catch(error) {
+		return res.status(500).send(error.message)
+	}
+}
+
 const updateTodo = async (req, res) => {
 	try {
 		const { id } = req.params
@@ -144,6 +156,7 @@ module.exports = {
 	createTodo,
 	getAllTodos,
 	getTodoById,
+	getUserTodos,
 	updateTodo,
 	deleteTodo,
 	getAllUsers
