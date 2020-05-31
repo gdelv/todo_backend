@@ -12,7 +12,9 @@
     "database":"peerpal_backend",
     "dialect": "postgres",
     "dialectOptions": {
-      "ssl": true   
+      "ssl": {
+        "rejectUnauthorized": true
+        }    
     }
   } 
 }
