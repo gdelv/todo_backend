@@ -9,12 +9,9 @@
   },
   "production": {
     "use_env_variable": "DATABASE_URL",
-    "database":"peerpal_backend",
     "dialect": "postgres",
     "dialectOptions": {
-      "ssl": {
-        "rejectUnauthorized": true
-        }    
+      "ssl": true
     }
   } 
 }
