@@ -6,13 +6,15 @@ module.exports = {
       title: 'Clean Room',
       completed: true,
       userId: 1,
+      date: new Date(),
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
       title: 'Wash Dishes',
       completed: false,
-      userId: 1,
+      userId: 2,
+      date: new Date(),
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -20,6 +22,7 @@ module.exports = {
       title: 'Water Lawn',
       completed: false,
       userId: 1,
+      date: new Date(),
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});

@@ -6,9 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     password_digest: DataTypes.STRING
   }, {});
   User.associate = function(models) {
-    // associations can be defined here
     User.hasMany(models.Todo, {
-      foreignKey: 'userId'
+      foreignKey: 'userId',
     })
   };
   return User;

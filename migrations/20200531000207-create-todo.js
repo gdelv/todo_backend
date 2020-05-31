@@ -8,23 +8,23 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userId: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'User',
-          key: 'id',
-          as: 'userId',
-        }
-      },
       title: {
         type: Sequelize.STRING
       },
       completed: {
         type: Sequelize.BOOLEAN
       },
+      date: {
+        type: Sequelize.DATE
+      },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Users',
+          key: 'id',
+          as: 'userId',
+        }
       },
       createdAt: {
         allowNull: false,
