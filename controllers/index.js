@@ -60,14 +60,10 @@ const createTodo = async (req, res) => {
 	try {
 		console.log('req.body:', req.body)
 		const createdTodo = await Todo.create(req.body)
-
 		return res.status(201).json({
-			todo: {
-				createdTodo
-			}
+			createdTodo
 		})
 	} catch (error) {
-		console.log(error)
 		return res.status(500).json({ error: error.message })
 	}
 }
