@@ -13,7 +13,7 @@ router.get('/users', controllers.getAllUsers) //works good
 router.get('/todos/:id', controllers.getTodoById) //works good
 // restricted routes
 router.get('/users/:id/todos', restrict, controllers.getUserTodos) //??
-router.post('/todos', restrict, controllers.createTodo) //works good 
+router.post('/todos',  controllers.createTodo) //took restrict away
 router.put('/todos/:id', restrict, controllers.updateTodo)
 router.delete('/todos/:id', restrict, controllers.deleteTodo)
 

@@ -61,7 +61,9 @@ const createTodo = async (req, res) => {
 		console.log('req.body:', req.body)
 		const createdTodo = await Todo.create(req.body)
 		return res.status(201).json({
-			createdTodo
+			todo: {
+				createdTodo
+			}
 		})
 	} catch (error) {
 		return res.status(500).json({ error: error.message })
